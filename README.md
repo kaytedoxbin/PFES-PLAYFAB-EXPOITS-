@@ -3,9 +3,11 @@
 # New Shit Soon Dw
 
 # NEEDED PACKS:
-\rpip install fake_headers
-\rpip install click
-\rpip install requests
+pip install fake_headers
+
+pip install click
+
+pip install requests
 
 https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481
 
