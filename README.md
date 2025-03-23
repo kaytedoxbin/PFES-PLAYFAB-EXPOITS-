@@ -1,6 +1,13 @@
-Welcome To The Exploit Hub Made By Jaydes And Crimson
-We Have Somestuff
-New Shit Soon Dw
+# Welcome To The Exploit Hub Made By Jaydes And Crimson
+# We Have Somestuff
+# New Shit Soon Dw
+
+# NEEDED PACKS:
+pip install fake_headers
+pip install click
+pip install requests
+
+https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481
 
 # NONCE GEN - Generates Nonce, Oculus ID, and Org Id. Generated based off game id given. 
 
@@ -13,10 +20,3 @@ New Shit Soon Dw
 # DDOSER
 
 ![image](https://github.com/user-attachments/assets/a68b0b72-e32b-423a-976e-e8839435f539)
-
-NEEDED PACKS
-pip install fake_headers
-pip install click
-pip install requests
-
-https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481
