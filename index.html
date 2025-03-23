@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tools</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000000;
+        margin: 0;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .topbar {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+
+      .topbar a {
+        color: white;
+        font-family: "Lexend", sans-serif;
+        font-size: 18px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .topbar a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background-color: rgb(44, 40, 40);
+        border: 2px solid rgba(0, 123, 255, 0.5);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s, box-shadow 0.2s;
+        outline: 2px solid #007bff;
+        outline-offset: -4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .xtra {
+        font-size: 24px;
+        font-family: "Lexend", sans-serif;
+        text-align: center;
+        color: rgba(255, 0, 0, 0.9);
+        margin-bottom: 20px;
+      }
+
+      .container:hover {
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+      }
+
+      .image {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        position: absolute;
+        bottom: 150px;
+      }
+
+      .text {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 20px;
+        color: #7c7a7a;
+        font-family: "Lexend", sans-serif;
+      }
+
+      .text2 {
+        position: absolute;
+        bottom: 50px;
+        text-align: center;
+        font-size: 10px;
+        color: #7c7a7a;
+        font-family: "Lexend", sans-serif;
+      }
+
+      .download-button {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: "Lexend", sans-serif;
+      }
+
+      .xtra2 {
+        font-size: 8px;
+        font-family: "Lexend", sans-serif;
+        text-align: center;
+        color: rgba(255, 0, 0, 0.9);
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <a
+        href="https://c8z4mq.csb.app/index.html"
+        target="https://c8z4mq.csb.app/index.html"
+        >Home</a
+      >
+      <a
+        href="https://c8z4mq.csb.app/exploits.html"
+        target="https://c8z4mq.csb.app/exploits.html"
+        >Exploits</a
+      >
+    </div>
+
+    <h1 class="xtra">tools</h1>
+
+    <div class="container" onmousemove="tilt(event)" onmouseleave="resetTilt()">
+      <img src="https://i.imgur.com/oAoTefW.png" alt="image" class="image" />
+      <div class="text">PCMI.zip</div>
+      <div class="text2">
+        Playfab Custom ID Manager. Able to buy items, give currency, or grab a
+        DLC. Able to log in with a custom id already made/logged in to on
+        playfab, allowing you to give yourself items on your own account.
+      </div>
+      <a
+        href="https://github.com/crimsonlmaoo/PCIM/releases/download/v1/PCIM.zip"
+        download
+      >
+        <button class="download-button">Download</button>
+      </a>
+    </div>
+
+    <h1 class="xtra2">jaydes x crimson, 2025</h1>
+    <script>
+      function tilt(event) {
+        const container = event.currentTarget;
+        const rect = container.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const midX = rect.width / 2;
+        const midY = rect.height / 2;
+        const deltaX = (x - midX) / midX;
+        const deltaY = (y - midY) / midY;
+        const tiltX = deltaY * 10;
+        const tiltY = -deltaX * 10;
+        container.style.transform = `perspective(500px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+      }
+
+      function resetTilt() {
+        const container = document.querySelector(".container");
+        container.style.transform =
+          "perspective(500px) rotateX(0deg) rotateY(0deg)";
+      }
+    </script>
+  </body>
+</html>
